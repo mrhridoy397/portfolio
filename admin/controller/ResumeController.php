@@ -26,7 +26,7 @@ class resume extends Controller
      * @return array|boolean
      * @desc Creates, and returns a user by calling the create method on the BatchModel...\
      **/
-    public function createresume($data, $file)
+    public function createresume($data)
     {
 
         $Payload = array(
@@ -59,7 +59,7 @@ class resume extends Controller
         return $this->Model->resumeedit($id);
     }
 
-    public function Updateresume(array $data, $file)
+    public function Updateresume(array $data)
     {
 
         $Payload = array(

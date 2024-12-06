@@ -38,7 +38,17 @@ class CMSController extends Controller
           return $this->Model->indexabout();
       }
   
+    //   resume
 
+    public function getresume()
+    {
+        return $this->Model->indexresume();
+    }
 
+       //   Services
+       public function getservices()
+       {
+           return $this->Model->indexservices();
+       }
     
 }

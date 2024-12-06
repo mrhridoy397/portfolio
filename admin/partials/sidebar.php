@@ -45,6 +45,34 @@
              </div>
          </div>
      </li>
+         <!-- Divider -->
+         <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#resume" aria-expanded="true" aria-controls="collapsePages">
+         <i class="far fa-file"></i>
+             <span>Resume</span>
+         </a>
+         <div id="resume" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="ResumeIndex.php">Resume</a>
+             </div>
+         </div>
+     </li>
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Services" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-fire"></i>
+             <span>Services</span>
+         </a>
+         <div id="Services" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="ServiceIndex.php">Services</a>
+             </div>
+         </div>
+     </li>
      <hr class="sidebar-divider my-0">
      <!-- Divider -->
      <hr class="sidebar-divider d-none d-md-block">

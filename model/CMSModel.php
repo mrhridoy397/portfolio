@@ -36,7 +36,38 @@ class CMSModel extends Db
           }
           return array();
       }
+
+       // resume
+       public function indexresume()
+       {
+           $this->query("SELECT * FROM `resume` where `status` = 1");
+           $this->execute();
+   
+           $resume = $this->fetchAll();
+           if (!empty($resume)) {
+               $Response = array(
+                   $resume
+               );
+               return $Response;
+           }
+           return array();
+       }
       
+         // Services
+         public function indexservices()
+         {
+             $this->query("SELECT * FROM `services` where `status` = 1");
+             $this->execute();
+     
+             $services = $this->fetchAll();
+             if (!empty($services)) {
+                 $Response = array(
+                     $services
+                 );
+                 return $Response;
+             }
+             return array();
+         }
     
     
     

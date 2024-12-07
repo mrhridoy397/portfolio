@@ -51,4 +51,9 @@ class CMSController extends Controller
            return $this->Model->indexservices();
        }
     
+        //   Counter
+        public function getCounter()
+        {
+            return $this->Model->indexCounter();
+        }
 }

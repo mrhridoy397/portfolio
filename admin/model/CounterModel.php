@@ -86,7 +86,8 @@ class counterModel extends Db
         $this->query("UPDATE `counter` SET `Title`=?,`number`=?,`status`=? WHERE `id`=?");
         $this->bind(1, $data['Title']);
         $this->bind(2, $data['number']);
-        $this->bind(3, $data['id']);
+        $this->bind(3, $data['status']);
+        $this->bind(4, $data['id']);
         
         if ($this->execute()) {
             $Response = array(

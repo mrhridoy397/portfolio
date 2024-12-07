@@ -8,6 +8,7 @@ $index = $heroaria->getheroaria();
 $about = $heroaria->getabout();
 $resume = $heroaria->getresume();
 $services = $heroaria->getservices();
+$Counter = $heroaria->getCounter();
 ?>
 
 
@@ -70,10 +71,10 @@ $services = $heroaria->getservices();
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-    <?php
+      <?php
 
-foreach ($index[0] as $items) {
-?>
+      foreach ($index[0] as $items) {
+      ?>
       <img  src="<?php echo ($items['image']); ?>"  alt="" data-aos="fade-in">
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
@@ -263,42 +264,26 @@ foreach ($index[0] as $items) {
     </section><!-- /Services Section -->
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section accent-background">
+    <section id="stats" class="stats section dark-background">
 
       <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
+        <?php
 
+        foreach ($Counter[0] as $items) {
+        ?>
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="0" class="purecounter">232</span>
-              <p>Clients</p>
+              <span data-purecounter-start="0" data-purecounter-end="<?php echo ($items['number']); ?>" data-purecounter-duration="0" class="purecounter"><?php echo ($items['number']); ?></span>
+              <p><?php echo ($items['Title']); ?></p>
             </div>
           </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="0" class="purecounter">521</span>
-              <p>Projects</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0" class="purecounter">1453</span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="0" class="purecounter">32</span>
-              <p>Awards</p>
-            </div>
-          </div><!-- End Stats Item -->
-
+          <?php 
+           }
+          ?>
         </div>
 
       </div>
@@ -586,7 +571,7 @@ foreach ($index[0] as $items) {
     </section><!-- /Faq Section -->
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section accent-background">
+    <section id="testimonials" class="testimonials section dark-background">
 
       <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
 
@@ -781,7 +766,7 @@ foreach ($index[0] as $items) {
 
   </main>
 
-  <footer id="footer" class="footer accent-background">
+  <footer id="footer" class="footer dark-background">
 
     <div class="container">
       <div class="copyright text-center ">

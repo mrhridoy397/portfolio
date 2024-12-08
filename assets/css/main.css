@@ -318,6 +318,28 @@ h6 {
   }
 }
 
+.hero .social-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+.hero .social-link {
+  margin-top: 20px;
+}
+.hero .social-link a:hover {
+  color: #fff;
+  background: #0078ff;
+  border-color: #0078ff;
+}
+
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {

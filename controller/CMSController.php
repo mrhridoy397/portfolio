@@ -56,4 +56,14 @@ class CMSController extends Controller
         {
             return $this->Model->indexCounter();
         }
+           //   Portfolio
+           public function getportfolio()
+           {
+               return $this->Model->indexportfolio();
+           }
+     //   Portfolio Details
+    public function detailsportfolio($id)
+     {
+         return $this->Model->portfolioDetails($id);
+     }
 }

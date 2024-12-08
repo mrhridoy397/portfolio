@@ -86,6 +86,34 @@ class CMSModel extends Db
               }
     
     
+       // Portfolio
+       public function indexportfolio()
+       {
+           $this->query("SELECT * FROM `portfolio` where `status` = 1");
+           $this->execute();
+   
+           $portfolio = $this->fetchAll();
+           if (!empty($portfolio)) {
+               $Response = array(
+                   $portfolio
+               );
+               return $Response;
+           }
+           return array();
+       }
+
+    //    Portfolio Details
+       public function portfolioDetails($id)
+       {
+           $this->query("SELECT * FROM `portfolio` where  `id` = :id");
+           $this->bind(':id', $id);
+           $this->execute();
+   
+           $portfolio = $this->fetch();
+   
+           return $portfolio;
+       }
+   
     
     
 }

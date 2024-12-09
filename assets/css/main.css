@@ -318,6 +318,14 @@ h6 {
   }
 }
 
+.hair-now .btn-visit {
+  padding: 8px 40px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
 .hero .social-link a {
   display: flex;
   align-items: center;

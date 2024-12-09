@@ -22,7 +22,7 @@
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#heroaria" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-yin-yang"></i>
+         <i class="fab fa-monero"></i>
              <span>Heroaria</span>
          </a>
          <div id="heroaria" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -92,12 +92,41 @@
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Portfolio" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-globe-europe"></i>
+         <i class="fab fa-r-project"></i>
              <span>Portfolio</span>
          </a>
          <div id="Portfolio" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  <a class="collapse-item" href="portfolioIndex.php">Portfolio</a>
+             </div>
+         </div>
+     </li>
+    <!-- Divider -->
+     <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Pricing" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-hand-holding-usd"></i>
+             <span>Pricing</span>
+         </a>
+         <div id="Pricing" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="PricingIndex.php">All Pricing</a>
+             </div>
+         </div>
+     </li>
+
+         <!-- Divider -->
+         <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#faq" aria-expanded="true" aria-controls="collapsePages">
+         <i class="far fa-question-circle"></i>
+             <span>FAQ</span>
+         </a>
+         <div id="faq" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="FaqIndex.php">All FAQ</a>
              </div>
          </div>
      </li>

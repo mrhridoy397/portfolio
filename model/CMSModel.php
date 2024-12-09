@@ -113,6 +113,38 @@ class CMSModel extends Db
    
            return $portfolio;
        }
+
+              // Pricing
+              public function indexPricing()
+              {
+                  $this->query("SELECT * FROM `pricing` where `status` = 1");
+                  $this->execute();
+          
+                  $Pricing = $this->fetchAll();
+                  if (!empty($Pricing)) {
+                      $Response = array(
+                          $Pricing
+                      );
+                      return $Response;
+                  }
+                  return array();
+              }
+
+                 // questions
+                 public function indexquestions()
+                 {
+                     $this->query("SELECT * FROM `questions` where `status` = 1");
+                     $this->execute();
+             
+                     $questions = $this->fetchAll();
+                     if (!empty($questions)) {
+                         $Response = array(
+                             $questions
+                         );
+                         return $Response;
+                     }
+                     return array();
+                 }
    
     
     

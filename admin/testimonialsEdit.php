@@ -1,10 +1,10 @@
-<?php require_once('./controller/AboutController.php'); ?>
+<?php require_once('./controller/testimonialsController.php'); ?>
 <?php
-$about = new about();
+$testimonials = new testimonials();
 $Response = [];
-$active = $about->active;
-$data = $about->edit($_REQUEST['id']);
-if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $about->Update($_REQUEST, $_FILES);
+$active = $testimonials->active;
+$data = $testimonials->edit($_REQUEST['id']);
+if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $testimonials->Update($_REQUEST, $_FILES);
 
 ?>
 
@@ -47,7 +47,7 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $about->Upda
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Edit <?php echo $active; ?></h1>
-                        <a href="AboutIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All <?php echo $active; ?></a>
+                        <a href="testimonialsIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All <?php echo $active; ?></a>
                     </div>
                     <?php if (isset($Response['status']) && !$Response['status']) : ?>
                         <br>
@@ -76,18 +76,6 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $about->Upda
                                             <input  type="text" name="name" id="name" class="form-control" placeholder="name" value="<?php if(isset($_REQUEST['name']))  { echo $__REQUEST['name'];} else{echo $data['name'];} ?>">
                                         </div>
                                         <div class="form-group">
-                                        <label for="profile">Profile</label>
-                                            <input  type="text" name="profile" id="profile" class="form-control" placeholder="Profile" value="<?php if(isset($_REQUEST['profile']))  { echo $__REQUEST['profile'];} else{echo $data['profile'];} ?>">
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="email">Email</label>
-                                            <input  type="email" name="email" id="email" class="form-control" placeholder="email" value="<?php if(isset($_REQUEST['email']))  { echo $__REQUEST['email'];} else{echo $data['email'];} ?>">
-                                        </div>
-                                        <div class="form-group">
-                                        <label for="phone">Phone</label>
-                                            <input  type="number" name="phone" id="phone" class="form-control" placeholder="phone" value="<?php if(isset($_REQUEST['phone']))  { echo $__REQUEST['phone'];} else{echo $data['phone'];} ?>">
-                                        </div>
-                                        <div class="form-group">
                                         <label for="description">Description</label>
                                           <textarea class="form-control" name="description" id="description" Rows="10" class="form-control"><?php if(isset($_REQUEST['description']))  { echo $__REQUEST['description'];} else{echo $data['description'];} ?></textarea>
                                         </div>
@@ -113,7 +101,7 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $about->Upda
                                         </div>
                                         <div class="form-group text-center mt-5">
                                             <button class="btn btn-primary" type="submit" name="submit">Update</button>
-                                            <a href="AboutIndex.php" class="btn btn-danger">Cancle</a>
+                                            <a href="testimonialsIndex.php" class="btn btn-danger">Cancle</a>
                                         </div>
                                     </form>
                                 </div>

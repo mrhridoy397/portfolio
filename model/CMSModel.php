@@ -146,6 +146,20 @@ class CMSModel extends Db
                      return array();
                  }
    
-    
+                     // Testimonials
+                     public function indextestimonials()
+                     {
+                         $this->query("SELECT * FROM `testimonials` where `status` = 1");
+                         $this->execute();
+                 
+                         $testimonials = $this->fetchAll();
+                         if (!empty($testimonials)) {
+                             $Response = array(
+                                 $testimonials
+                             );
+                             return $Response;
+                         }
+                         return array();
+                     }
     
 }

@@ -130,6 +130,21 @@
              </div>
          </div>
      </li>
+
+   <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Testimonial" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fab fa-affiliatetheme"></i>
+             <span>Testimonial</span>
+         </a>
+         <div id="Testimonial" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="testimonialsIndex.php">All Testimonial</a>
+             </div>
+         </div>
+     </li>
      <hr class="sidebar-divider my-0">
      <!-- Divider -->
      <hr class="sidebar-divider d-none d-md-block">

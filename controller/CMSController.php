@@ -78,4 +78,10 @@ class CMSController extends Controller
          {
              return $this->Model->indexquestions();
          }
+
+            // Testimonials
+            public function gettestimonials()
+            {
+                return $this->Model->indextestimonials();
+            }
 }

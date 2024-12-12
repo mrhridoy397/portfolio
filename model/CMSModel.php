@@ -161,5 +161,12 @@ class CMSModel extends Db
                          }
                          return array();
                      }
-    
+                    // Settings
+                    public function settings()
+                    {
+                        $this->query("SELECT * FROM `settings` ");
+                        $this->execute();
+                        $settings = $this->fetchAll();
+                        return $settings;
+                    }
 }

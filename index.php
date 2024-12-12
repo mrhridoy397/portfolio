@@ -13,6 +13,7 @@ $portfolio = $heroaria->getportfolio();
 $Pricing = $heroaria->getPricing();
 $FAQ = $heroaria->getquestions();
 $testimonial = $heroaria->gettestimonials();
+$settings = $heroaria->getsettings();
 ?>
 
 
@@ -27,7 +28,7 @@ $testimonial = $heroaria->gettestimonials();
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="<?php echo $settings[0]['description']; ?>" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -66,11 +67,11 @@ $testimonial = $heroaria->gettestimonials();
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <a href="#" class="btn-visit align-self-start">Hire Now</a>
+      <a href="<?php echo $settings[1]['description']; ?>" class="btn-visit align-self-start">Hire Now</a>
     </div>
   </header>
 
-  <main class="main">
+  <main class="main dark-background">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
@@ -84,10 +85,10 @@ $testimonial = $heroaria->gettestimonials();
         <h2><?php echo ($items['Title']); ?></h2>
         <p><span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
           <div class="social-link d-flex justify-content-center">
-          <a href="#"><i class="bi bi-whatsapp"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="<?php echo $settings[3]['description']; ?>"><i class="bi bi-whatsapp"></i></a>
+          <a href="<?php echo $settings[4]['description']; ?>"><i class="bi bi-facebook"></i></a>
+          <a href="<?php echo $settings[5]['description']; ?>"><i class="bi bi-instagram"></i></a>
+          <a href="<?php echo $settings[6]['description']; ?>"><i class="bi bi-linkedin"></i></a>
       </div>
       </div>
       <?php
@@ -204,7 +205,7 @@ $testimonial = $heroaria->gettestimonials();
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p><?php echo $settings[7]['description']; ?></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -239,7 +240,7 @@ $testimonial = $heroaria->gettestimonials();
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p><?php echo $settings[8]['description']; ?></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -304,7 +305,7 @@ $testimonial = $heroaria->gettestimonials();
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p><?php echo $settings[9]['description']; ?></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -346,7 +347,7 @@ $testimonial = $heroaria->gettestimonials();
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p><?php echo $settings[10]['description']; ?></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -382,9 +383,7 @@ $testimonial = $heroaria->gettestimonials();
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="content px-xl-5">
               <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
+              <p><?php echo $settings[11]['description']; ?> </p>
             </div>
           </div>
 
@@ -479,7 +478,7 @@ $testimonial = $heroaria->gettestimonials();
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p><?php echo $settings[14]['description']; ?></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -492,7 +491,7 @@ $testimonial = $heroaria->gettestimonials();
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p><?php echo $settings[12]['description']; ?></p>
                 </div>
               </div>
             </div><!-- End Info Item -->
@@ -502,7 +501,7 @@ $testimonial = $heroaria->gettestimonials();
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <p><?php echo $settings[13]['description']; ?></p>
                 </div>
               </div>
             </div><!-- End Info Item -->
@@ -512,7 +511,7 @@ $testimonial = $heroaria->gettestimonials();
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <p><?php echo $settings[15]['description']; ?></p>
                 </div>
               </div>
             </div><!-- End Info Item -->

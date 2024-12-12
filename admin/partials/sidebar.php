@@ -145,6 +145,16 @@
              </div>
          </div>
      </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+     <!-- Sidebar Toggler (Sidebar) -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="SettingEdit.php">
+             <i class="fas fa-cogs fa-sm text-white-50"></i>
+             <span>Settings</span>
+         </a>
+         </li>
      <hr class="sidebar-divider my-0">
      <!-- Divider -->
      <hr class="sidebar-divider d-none d-md-block">

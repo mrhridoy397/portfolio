@@ -1,3 +1,6 @@
+<?php session_start(); ?>
+
+
 
 <?php require_once('./controller/CMSController.php'); ?>
 <?php
@@ -519,7 +522,7 @@ $settings = $heroaria->getsettings();
           </div>
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+        <form action="contact.php" method="post" class="php-email-form">
           <div class="row gy-4">
 
             <div class="col-md-6">
@@ -531,21 +534,15 @@ $settings = $heroaria->getsettings();
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              <input type="text" class="form-control" name="subject"  placeholder="Subject" required="">
             </div>
 
             <div class="col-md-12">
               <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
             </div>
-
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
+              <button type="submit" name="submit">Send Message</button>
             </div>
-
           </div>
         </form><!-- End Contact Form -->
 
@@ -578,6 +575,7 @@ $settings = $heroaria->getsettings();
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -589,8 +587,27 @@ $settings = $heroaria->getsettings();
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  <script>
+
+    var massageText = "<?= $_SESSION['status'] ?? ''; ?>"
+
+    if(massageText != ''){
+
+   
+      Swal.fire({
+      title: "Thank you!",
+      text: massageText,
+      icon: "success"
+      });
+      <?php unset($_SESSION['status']); ?>
+    }
+            
+  </script>
 
 </body>
 
